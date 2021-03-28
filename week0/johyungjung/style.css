@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+.flexBackGround {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexCenter {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexLayer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nameText {
+    font: bold normal normal calc(70vw * 0.05) NanumSquare;
+    letter-spacing: calc(70vw * 0.002);
+    color: #ffffff;
+}
+
+.subText {
+    margin-top: 4%;
+    font: normal normal normal calc(70vw * 0.025) NanumSquare;
+    letter-spacing: calc(70vw * 0.001);
+    color: #ffffff;
+}
+
+.url {
+    text-decoration: none;
+    margin-left: 3%;
+    font: normal normal normal calc(70vw * 0.02) Arial;
+    color: #ffffff;
+}
