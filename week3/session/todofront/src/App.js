@@ -6,7 +6,7 @@ function App() {
   const [todos, setTodos] = useState([])
 
   useEffect( () => {
-    axios.get("http://localhost:8000/select/").then((res) => {
+    axios.get("http://13.124.59.193:8000/select/").then((res) => {
       console.log(res.data)
       setTodos(res.data)
   })
@@ -15,9 +15,9 @@ function App() {
   async function deleteRow(idx){
     const form = new FormData();
     form.append('id',idx)
-    axios.post("http://localhost:8000/delete/",form).then((res) => {
+    axios.post("http://13.124.59.193:8000/delete/",form).then((res) => {
       console.log(res.data)
-      axios.get("http://localhost:8000/select/").then((res) => {
+      axios.get("http://13.124.59.193:8000/select/").then((res) => {
         console.log(res.data)
         setTodos(res.data)
       })
@@ -29,9 +29,9 @@ function App() {
       const form = new FormData();
       // console.log(e.target.value);
       form.append('mainText',e.target.value)
-      axios.post("http://localhost:8000/insert/",form).then((res) => {
+      axios.post("http://13.124.59.193:8000/insert/",form).then((res) => {
         console.log(res.data)
-        axios.get("http://localhost:8000/select/").then((res) => {
+        axios.get("http://13.124.59.193:8000/select/").then((res) => {
           console.log(res.data)
           setTodos(res.data)
         })
@@ -42,9 +42,9 @@ function App() {
   async function update(idx){
     const form = new FormData();
     form.append('id',idx)
-    axios.post("http://localhost:8000/update/",form).then((res) => {
+    axios.post("http://13.124.59.193:8000/update/",form).then((res) => {
       console.log(res.data)
-      axios.get("http://localhost:8000/select/").then((res) => {
+      axios.get("http://13.124.59.193:8000/select/").then((res) => {
         console.log(res.data)
         setTodos(res.data)
       })
